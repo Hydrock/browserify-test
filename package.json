@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist && mkdir dist",
     "build": "npm run clean && node ./node_modules/.bin/browserify ./src/main.js > ./dist/bundle.js",
-    "build2": "browserify ./main.js > ./bundle.js"
   },
   "author": "",
   "license": "ISC",
