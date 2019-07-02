@@ -6,11 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist && mkdir dist",
-    "build": "npm run clean && node ./node_modules/.bin/browserify ./src/main.js > ./dist/bundle.js"
+    "build": "npm run clean && node ./node_modules/.bin/browserify ./src/main.js > ./dist/bundle.js --debug",
+    "build-no-minify": "npm run clean && node ./node_modules/.bin/browserify ./src/main.js | ./node_modules/.bin/uglifyjs > ./dist/bundle.js --beautify"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "browserify": "^16.2.3"
+    "browserify": "^16.2.3",
+    "uglify-js": "^3.6.0"
   }
 }
